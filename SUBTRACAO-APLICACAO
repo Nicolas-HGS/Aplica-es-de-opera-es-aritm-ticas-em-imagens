@@ -1,6 +1,7 @@
 import cv2
 
 img_1 = cv2.imread('sem_caneta.jpg')
+![imagem sem a caneta](/assets/images/sem_caneta.jpg)
 img_2 = cv2.imread('com_caneta.jpg')
 
 img_3 = cv2.subtract(img_1,img_2)
