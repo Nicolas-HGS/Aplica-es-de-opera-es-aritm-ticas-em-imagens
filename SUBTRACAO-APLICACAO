@@ -1,1 +1,16 @@
+import cv2
 
+img_1 = cv2.imread('IMG_20230810_190335131_MFNR.jpg')
+img_2 = cv2.imread('IMG_20230810_190338899_MFNR.jpg')
+
+img_3 = cv2.subtract(img_1,img_2)
+
+cv2.namedWindow("Resize", cv2.WINDOW_NORMAL)
+cv2.resizeWindow("Resize", 300, 300)
+
+img_f = cv2.hconcat([img_1,img_2,img_3])
+
+cv2.imshow('Resize',img_f)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
